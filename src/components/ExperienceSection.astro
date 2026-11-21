@@ -1,0 +1,328 @@
+
+---
+import "../styles/experience.css";
+
+
+const experience = [
+  {
+    period: "FEB 2025 — MAR 2026",
+    role: "Desarrollador Full Stack IA",
+    organization: "Magic World Computers → TechHive · Desarrollo de producto SaaS",
+    description:
+      "Diseñé y desarrollé TechHive desde cero, inicialmente como una plataforma empresarial para Magic World Computers y posteriormente evolucionada hacia un producto SaaS independiente del cual obtuve los derechos de comercialización. Responsable de toda la arquitectura, desarrollo Full Stack, integración de IA, infraestructura y despliegue. Implementé módulos de servicio técnico e inventario para clientes y personal, chatbot contextual conectado a OpenAI API y un sistema funcional de predicción de ventas.",
+    type: "DESARROLLO DE PRODUCTO · SaaS & IA",
+  },
+  {
+    period: "FEB 2024 — FEB 2025",
+    role: "Desarrollador Full Stack",
+    organization: "Magic World Computers — Quito, Ecuador",
+    description:
+      "Diseñé y desarrollé ServiceTrack desde cero, incluyendo arquitectura, desarrollo Full Stack y despliegue. Implementé una plataforma gamificada de soporte técnico con recepción de equipos mediante API, gestión de actividades, reportes, historiales, guías de reparación y videotutoriales. Integré ChatGPT API para asistencia técnica y desarrollé un sistema de recomendaciones basado en Machine Learning que identificaba métricas de bajo rendimiento y generaba recomendaciones personalizadas. Implementé un sistema de recompensas donde los técnicos acumulaban y canjeaban puntos por actividades completadas.",
+    type: "DESARROLLO FULL STACK · IA & ML",
+  },
+  {
+    period: "JUN 2023 — ABR 2024",
+    role: "Full Stack Developer",
+    organization: "Join Solutions — Quito, Ecuador",
+    description:
+      "Tras completar mi periodo de pasantía, fui contratado a tiempo completo para continuar desarrollando sistemas empresariales. Trabajé en módulos existentes de facturación electrónica, inventarios y otros procesos de negocio, desarrollando funcionalidades de frontend, backend, bases de datos y APIs. Implementé automatización de reportes de ventas, compras e inventarios, consultas SQL y procedimientos almacenados para estadísticas dinámicas. Participé en el desarrollo colaborativo mediante Git, ramas individuales y metodología Scrum.",
+    type: "DESARROLLO FULL STACK",
+  },
+  {
+    period: "MAR 2023 — MAY 2023",
+    role: "Pasante Full Stack Developer",
+    organization: "Join Solutions — Quito, Ecuador",
+    description:
+      "Participé en el desarrollo y mantenimiento de sistemas empresariales utilizando Laravel, Vue 3 y TypeScript. Colaboré en la implementación de funcionalidades para módulos existentes, trabajando tanto en frontend como backend, bases de datos, APIs, autenticación y paneles administrativos. Esta etapa permitió consolidar mis conocimientos prácticos de desarrollo Full Stack y trabajo colaborativo en proyectos reales.",
+    type: "PASANTÍA · DESARROLLO DE SOFTWARE",
+  },
+  {
+    period: "MAR 2021 — FEB 2023",
+    role: "Técnico de servicio y soporte",
+    organization: "Magic World Computers — Quito, Ecuador",
+    description:
+      "Diagnóstico y reparación de computadoras, laptops e impresoras, mantenimiento preventivo y correctivo, instalación de sistemas operativos, programas y controladores, configuración de redes LAN y equipos tecnológicos. Gestión de recepción de equipos, seguimiento de reparaciones, inventario y venta de productos. Atención directa al cliente, asesoramiento técnico y resolución de incidencias.",
+    type: "SOPORTE TÉCNICO · HARDWARE & REDES",
+  },
+];
+
+const education = [
+  {
+    degree: "Ingeniería en Software",
+    institution: "Universidad de Las Américas (UDLA)",
+    detail: "2020 — 2025 · Titulación universitaria",
+    icon: "degree",
+  },
+  {
+    degree: "Maestría en Inteligencia Artificial Aplicada",
+    institution: "Universidad de Las Américas (UDLA)",
+    detail: "Feb 2025 — Abr 2026 · Posgrado finalizado",
+    icon: "master",
+  },
+];
+
+
+const technologies = [
+  {
+    name: "Python",
+    category: "Backend & IA",
+    class: "tech-python",
+  },
+  {
+    name: "PHP",
+    category: "Backend",
+    class: "tech-php",
+  },
+  {
+    name: "JavaScript",
+    category: "Frontend",
+    class: "tech-js",
+  },
+  {
+    name: "TypeScript",
+    category: "Frontend",
+    class: "tech-ts",
+  },
+  {
+    name: "Vue",
+    category: "Frontend",
+    class: "tech-vue",
+  },
+  {
+    name: "Laravel",
+    category: "Framework",
+    class: "tech-laravel",
+  },
+  {
+    name: "Django",
+    category: "Framework",
+    class: "tech-django",
+  },
+  {
+    name: "PostgreSQL",
+    category: "Database",
+    class: "tech-postgres",
+  },
+  {
+    name: "Docker",
+    category: "DevOps",
+    class: "tech-docker",
+  },
+  {
+    name: "Kubernetes",
+    category: "DevOps",
+    class: "tech-kubernetes",
+  },
+  {
+    name: "Jenkins",
+    category: "CI/CD",
+    class: "tech-jenkins",
+  },
+  {
+    name: "RabbitMQ",
+    category: "Messaging",
+    class: "tech-rabbitmq",
+  },
+  {
+    name: "Selenium",
+    category: "Testing",
+    class: "tech-selenium",
+  },
+  {
+    name: "Postman",
+    category: "Testing & API",
+    class: "tech-postman",
+  },
+  {
+    name: "SonarQube",
+    category: "Code Quality",
+    class: "tech-sonar",
+  },
+  {
+    name: "VMware",
+    category: "Virtualization",
+    class: "tech-vmware",
+  },
+  {
+    name: "VirtualBox",
+    category: "Virtualization",
+    class: "tech-virtualbox",
+  },
+  {
+    name: "Microsoft 365",
+    category: "Productivity",
+    class: "tech-microsoft",
+  },
+];
+---
+
+<section class="experience-section th-section" id="experience">
+  <div class="th-container">
+
+    <!-- HEADER -->
+    <div class="experience-heading">
+      <div class="experience-label">
+        <span class="experience-label-line"></span>
+        <span>TRAYECTORIA & CONOCIMIENTO</span>
+      </div>
+
+      <div class="experience-heading-content">
+        <h2 class="th-section-title">
+          Experiencia.<br />
+          <span>Aprendizaje continuo.</span>
+        </h2>
+
+        <p class="th-section-description">
+          Un recorrido entre el soporte tecnológico, el desarrollo de software
+          y la inteligencia artificial. Cada experiencia suma nuevas perspectivas
+          para construir mejores soluciones.
+        </p>
+      </div>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="experience-grid">
+
+      <!-- TIMELINE -->
+      <div class="experience-column">
+        <div class="experience-column-header">
+          <span>01 / EXPERIENCIA</span>
+          <span class="experience-header-line"></span>
+        </div>
+
+        <div class="experience-timeline">
+          {experience.map((item) => (
+            <article class="experience-item">
+              <div class="experience-timeline-marker">
+                <span></span>
+              </div>
+
+              <div class="experience-item-content">
+                <span class="experience-period">{item.period}</span>
+                <span class="experience-type">{item.type}</span>
+
+                <h3>{item.role}</h3>
+                <h4>{item.organization}</h4>
+
+                <p>{item.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="education-block">
+          <div class="experience-column-header">
+            <span>02 / FORMACIÓN</span>
+            <span class="experience-header-line"></span>
+          </div>
+
+          <div class="education-list">
+            {education.map((item) => (
+              <article class="education-item">
+                <div class="education-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M6.5 11.1v5.1c3.3 2.5 7.7 2.5 11 0v-5.1M21.5 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <div class="education-item-content">
+                  <h3>{item.degree}</h3>
+                  <span>{item.institution}</span>
+                  <p>{item.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNOLOGY STACK -->
+      <div class="technology-column">
+        <div class="experience-column-header">
+          <span>03 / TECNOLOGÍAS & HERRAMIENTAS</span>
+          <span class="experience-header-line"></span>
+        </div>
+
+        <div class="technology-panel">
+          <div class="technology-panel-intro">
+            <span class="technology-panel-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+            <div>
+              <h3>Stack tecnológico</h3>
+              <p>Herramientas y tecnologías utilizadas en distintos proyectos.</p>
+            </div>
+          </div>
+
+          <div class="technology-groups">
+            <div class="technology-group">
+              <span class="technology-group-title">DESARROLLO</span>
+              <div class="technology-tags">
+                {technologies.filter((t) => ["Python", "PHP", "JavaScript", "TypeScript", "Vue", "Laravel", "Django"].includes(t.name)).map((tech) => (
+                  <span class={`technology-tag ${tech.class}`}>{tech.name}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <span class="technology-group-title">BASES DE DATOS & MENSAJERÍA</span>
+              <div class="technology-tags">
+                {technologies.filter((t) => ["PostgreSQL", "RabbitMQ"].includes(t.name)).map((tech) => (
+                  <span class={`technology-tag ${tech.class}`}>{tech.name}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <span class="technology-group-title">INFRAESTRUCTURA & DEVOPS</span>
+              <div class="technology-tags">
+                {technologies.filter((t) => ["Docker", "Kubernetes", "Jenkins", "VMware", "VirtualBox"].includes(t.name)).map((tech) => (
+                  <span class={`technology-tag ${tech.class}`}>{tech.name}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <span class="technology-group-title">CALIDAD & TESTING</span>
+              <div class="technology-tags">
+                {technologies.filter((t) => ["Selenium", "Postman", "SonarQube"].includes(t.name)).map((tech) => (
+                  <span class={`technology-tag ${tech.class}`}>{tech.name}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <span class="technology-group-title">PRODUCTIVIDAD</span>
+              <div class="technology-tags">
+                {technologies.filter((t) => ["Microsoft 365"].includes(t.name)).map((tech) => (
+                  <span class={`technology-tag ${tech.class}`}>{tech.name}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-panel-footer">
+            <span>CONOCIMIENTO EN CONSTANTE EVOLUCIÓN</span>
+            <span class="technology-footer-mark">✳</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="experience-bottom">
+      <span class="experience-bottom-mark">✳</span>
+      <p>
+        <strong>Aprender, construir y mejorar.</strong>
+        La tecnología nunca se detiene, y tampoco la curiosidad por explorarla.
+      </p>
+    </div>
+
+  </div>
+</section>

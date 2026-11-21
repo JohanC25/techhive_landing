@@ -1,0 +1,342 @@
+
+---
+import "../styles/projects.css";
+
+const projects = [
+  {
+    number: "01",
+    name: "TechHive",
+    category: "SAAS · GESTIÓN EMPRESARIAL",
+    description:
+      "Una plataforma de gestión empresarial que centraliza ventas, compras e inventario en un solo lugar. Integra inteligencia artificial para analizar información y generar predicciones de ventas, ayudando a los negocios a tomar decisiones más estratégicas.",
+    technologies: ["Django", "Vue 3", "TypeScript", "PostgreSQL", "IA"],
+    status: "En desarrollo",
+    class: "project-techhive",
+    featured: true,
+  },
+  {
+    number: "02",
+    name: "Catálogo de impresión 3D",
+    category: "DISEÑO Y FABRICACIÓN 3D",
+    description:
+      "Un catálogo digital de creaciones impresas en 3D que conecta el diseño digital con objetos físicos. Explora productos personalizables, nuevas posibilidades de fabricación y transforma ideas en piezas tangibles.",
+    technologies: ["Laravel", "PHP", "PostgreSQL", "JavaScript", "Impresión 3D"],
+    status: "En desarrollo",
+    class: "project-catalog",
+    featured: false,
+  },
+  {
+    number: "03",
+    name: "ServiceTrack",
+    category: "GESTIÓN TÉCNICA · GAMIFICACIÓN",
+    description:
+      "Un sistema gamificado diseñado para potenciar el rendimiento de los técnicos y elevar la calidad del servicio técnico. Convierte el trabajo diario en una experiencia de progreso, seguimiento y mejora continua mediante indicadores de desempeño y dinámicas de motivación.",
+    technologies: ["Django", "Python", "Gamificación", "KPI", "Dashboard"],
+    status: "Proyecto",
+    class: "project-servicetrack",
+    featured: false,
+  },
+  {
+    number: "04",
+    name: "Landing Page TechHive",
+    category: "DISEÑO WEB · ECOSISTEMA TECNOLÓGICO",
+    description:
+      "Diseño y desarrollo de la landing page del ecosistema TechHive. Una experiencia web modular y responsive creada para presentar proyectos, servicios, áreas tecnológicas y perfil profesional, utilizando tecnologías modernas de desarrollo frontend.",
+    technologies: ["Astro", "TypeScript", "Tailwind CSS"],
+    status: "En desarrollo",
+    class: "project-landing",
+    featured: false,
+  },
+];
+---
+
+<section class="projects-section th-section" id="projects">
+  <div class="th-container">
+    <!-- HEADER -->
+    <div class="projects-heading">
+      <div class="projects-heading-label">
+        <span class="heading-marker"></span>
+        <span>PROYECTOS DESTACADOS</span>
+      </div>
+
+      <div class="projects-heading-content">
+        <h2 class="th-section-title">
+          Ideas en movimiento.<br />
+          <span>Soluciones en construcción.</span>
+        </h2>
+
+        <p class="th-section-description">
+          Cada proyecto representa una oportunidad para experimentar, resolver
+          problemas y llevar la tecnología más allá de una idea.
+        </p>
+      </div>
+    </div>
+
+    <!-- FEATURED PROJECT -->
+    {projects.filter((project) => project.featured).map((project) => (
+      <article class={`project-featured ${project.class}`}>
+        <div class="project-featured-visual">
+          <div class="project-visual-grid"></div>
+
+          <div class="project-window">
+            <div class="project-window-header">
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="window-label">TECHHIVE / DASHBOARD</span>
+            </div>
+
+            <div class="project-dashboard">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-logo">
+                  <span class="dashboard-logo-mark"></span>
+                  <span>TECH<span>HIVE</span></span>
+                </div>
+
+                <div class="dashboard-menu-item active">
+                  <span class="dashboard-menu-icon">◈</span>
+                  Panel
+                </div>
+                <div class="dashboard-menu-item">
+                  <span class="dashboard-menu-icon">▤</span>
+                  Servicios
+                </div>
+                <div class="dashboard-menu-item">
+                  <span class="dashboard-menu-icon">▦</span>
+                  Inventario
+                </div>
+                <div class="dashboard-menu-item">
+                  <span class="dashboard-menu-icon">◉</span>
+                  Clientes
+                </div>
+              </aside>
+
+              <div class="dashboard-main">
+                <div class="dashboard-topbar">
+                  <span>Panel de control</span>
+                  <span class="dashboard-avatar">TH</span>
+                </div>
+
+                <div class="dashboard-welcome">
+                  <span>VISTA GENERAL</span>
+                  <div>Gestión de operaciones</div>
+                </div>
+
+                <div class="dashboard-stats">
+                  <div class="dashboard-stat">
+                    <span>Servicios</span>
+                    <div class="stat-placeholder"></div>
+                    <small>Registro y seguimiento</small>
+                  </div>
+                  <div class="dashboard-stat">
+                    <span>Inventario</span>
+                    <div class="stat-placeholder short"></div>
+                    <small>Control de productos</small>
+                  </div>
+                </div>
+
+                <div class="dashboard-chart">
+                  <div class="chart-header">
+                    <span>Actividad operativa</span>
+                    <span>Últimos registros</span>
+                  </div>
+                  <div class="chart-bars">
+                    <span style="height: 30%"></span>
+                    <span style="height: 48%"></span>
+                    <span style="height: 38%"></span>
+                    <span style="height: 66%"></span>
+                    <span style="height: 52%"></span>
+                    <span style="height: 82%"></span>
+                    <span style="height: 60%"></span>
+                    <span style="height: 95%"></span>
+                    <span style="height: 72%"></span>
+                    <span style="height: 100%"></span>
+                    <span style="height: 80%"></span>
+                    <span style="height: 88%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-visual-caption">
+            <span>VISTA CONCEPTUAL</span>
+            <span>01 / 04</span>
+          </div>
+        </div>
+
+        <div class="project-featured-info">
+          <div class="project-meta">
+            <span class="project-number">{project.number}</span>
+            <span class="project-category">{project.category}</span>
+          </div>
+
+          <div class="project-title-row">
+            <h3>{project.name}</h3>
+            <span class="project-status">
+              <span></span>
+              {project.status}
+            </span>
+          </div>
+
+          <p class="project-description">{project.description}</p>
+
+          <div class="project-technologies">
+            {project.technologies.map((tech) => (
+              <span>{tech}</span>
+            ))},
+          </div>
+
+          <div class="project-info-footer">
+            <span>PLATAFORMA DIGITAL</span>
+            <span class="project-info-arrow">↗</span>
+          </div>
+        </div>
+      </article>
+    ))}
+
+    <!-- OTHER PROJECTS -->
+    <div class="projects-grid">
+      {projects.filter((project) => !project.featured).map((project) => (
+        <article class={`project-card ${project.class}`}>
+          <div class="project-card-visual">
+            <div class="project-card-visual-grid"></div>
+
+            {project.class === "project-catalog" && (
+              <div class="catalog-visual">
+                <div class="catalog-object">
+                  <div class="catalog-cube">
+                    <div class="cube-face cube-front"></div>
+                    <div class="cube-face cube-back"></div>
+                    <div class="cube-face cube-right"></div>
+                    <div class="cube-face cube-left"></div>
+                    <div class="cube-face cube-top"></div>
+                    <div class="cube-face cube-bottom"></div>
+                  </div>
+                </div>
+                <span class="visual-tech-label">DIGITAL FABRICATION</span>
+              </div>
+            )}
+
+            
+            {project.class === "project-servicetrack" && (
+            <div class="service-track-visual">
+                <div class="service-track-panel">
+                <div class="track-panel-header">
+                    <span>PERFORMANCE TRACKER</span>
+                    <span class="track-live">
+                    <i></i>
+                    SISTEMA
+                    </span>
+                </div>
+
+                <div class="track-level">
+                    <span>NIVEL DE RENDIMIENTO</span>
+                    <div class="track-level-value">
+                    <strong>PROGRESO</strong>
+                    <span>↗</span>
+                    </div>
+                </div>
+
+                <div class="track-progress">
+                    <span></span>
+                </div>
+
+                <div class="track-achievements">
+                    <div class="track-achievement">
+                    <div class="achievement-icon">✦</div>
+                    <div>
+                        <span>OBJETIVOS</span>
+                        <strong>Desempeño</strong>
+                    </div>
+                    </div>
+
+                    <div class="track-achievement">
+                    <div class="achievement-icon">↗</div>
+                    <div>
+                        <span>EVOLUCIÓN</span>
+                        <strong>Mejora continua</strong>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="track-bottom-line">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                </div>
+
+                <span class="visual-tech-label">GAMIFICACIÓN / PERFORMANCE</span>
+            </div>
+            )}
+
+            {project.class === "project-courier" && (
+              <div class="courier-visual">
+                <div class="courier-map">
+                  <div class="map-road road-one"></div>
+                  <div class="map-road road-two"></div>
+                  <div class="map-road road-three"></div>
+                  <div class="map-route"></div>
+                  <div class="map-pin pin-start">
+                    <span></span>
+                  </div>
+                  <div class="map-pin pin-end">
+                    <span></span>
+                  </div>
+                  <div class="map-node node-one"></div>
+                  <div class="map-node node-two"></div>
+                  <div class="map-node node-three"></div>
+                </div>
+                <span class="visual-tech-label">GPS / TRACKING</span>
+              </div>
+            )}
+          </div>
+
+          <div class="project-card-info">
+            <div class="project-meta">
+              <span class="project-number">{project.number}</span>
+              <span class="project-category">{project.category}</span>
+            </div>
+
+            <div class="project-title-row">
+              <h3>{project.name}</h3>
+              <span class="project-status">
+                <span></span>
+                {project.status}
+              </span>
+            </div>
+
+            <p class="project-description">{project.description}</p>
+
+            <div class="project-technologies">
+              {project.technologies.map((tech) => (
+                <span>{tech}</span>
+              ))}
+            </div>
+
+            <div class="project-info-footer">
+              <span>PROYECTO TECNOLÓGICO</span>
+              <span class="project-info-arrow">↗</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- FOOTNOTE -->
+    <div class="projects-bottom">
+      <span class="projects-bottom-line"></span>
+      <p>
+        Proyectos que nacen de la curiosidad y evolucionan a través de la
+        <strong> tecnología.</strong>
+      </p>
+    </div>
+  </div>
+</section>

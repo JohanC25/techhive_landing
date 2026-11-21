@@ -1,0 +1,173 @@
+
+---
+import "../styles/hive-section.css";
+
+const areas = [
+  {
+    number: "01",
+    name: "Software",
+    category: "DESARROLLO DE SOFTWARE",
+    description:
+      "Aplicaciones, plataformas y productos digitales diseñados para resolver problemas reales y transformar ideas en soluciones funcionales.",
+    tags: ["Aplicaciones", "SaaS", "Desarrollo web"],
+    class: "software",
+    status: "Área activa",
+  },
+  {
+    number: "02",
+    name: "Laboratorio de IA",
+    category: "INTELIGENCIA ARTIFICIAL",
+    description:
+      "Exploración de inteligencia artificial, aprendizaje automático y automatización para crear sistemas más inteligentes y adaptables.",
+    tags: ["Machine Learning", "IA", "Automatización"],
+    class: "ai",
+    status: "Área activa",
+  },
+  {
+    number: "03",
+    name: "Laboratorio 3D",
+    category: "DISEÑO Y FABRICACIÓN 3D",
+    description:
+      "Diseño digital, modelado y fabricación de objetos físicos mediante impresión 3D, convirtiendo conceptos en piezas tangibles.",
+    tags: ["Modelado 3D", "Prototipado", "Impresión 3D"],
+    class: "lab3d",
+    status: "Área activa",
+  },
+  {
+    number: "04",
+    name: "Redes e infraestructura",
+    category: "SISTEMAS E INFRAESTRUCTURA",
+    description:
+      "Construcción y administración de entornos tecnológicos, servidores, redes y servicios que permiten que los sistemas funcionen.",
+    tags: ["Servidores", "Redes", "DevOps"],
+    class: "networks",
+    status: "En desarrollo",
+  },
+];
+---
+
+<section class="hive-section th-section" id="hive">
+  <div class="th-container">
+    <!-- Section heading -->
+    <div class="hive-heading">
+      <div class="hive-heading-label">
+        <span class="heading-marker"></span>
+        <span>EL ECOSISTEMA</span>
+      </div>
+
+      <div class="hive-heading-content">
+        <h2 class="th-section-title">
+          Más que proyectos<br />
+          <span>independientes.</span>
+        </h2>
+
+        <p class="th-section-description">
+          TechHive es un ecosistema de tecnología donde distintas áreas de
+          desarrollo, investigación y creación evolucionan de manera independiente,
+          impulsando soluciones y explorando nuevas posibilidades.
+        </p>
+      </div>
+    </div>
+
+    <!-- Ecosystem areas -->
+    <div class="hive-grid">
+      {areas.map((area) => (
+        <article class={`hive-card ${area.class}`}>
+          <div class="hive-card-top">
+            <span class="hive-card-number">{area.number}</span>
+
+            <span class="hive-card-status">
+              <span class="status-indicator"></span>
+              {area.status}
+            </span>
+          </div>
+
+          <div class="hive-card-icon">
+            {area.class === "software" && (
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="7" y="9" width="34" height="27" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 16H41" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12.5" r="1" fill="currentColor"/>
+                <circle cx="16" cy="12.5" r="1" fill="currentColor"/>
+                <path d="M18 23L13 27L18 31M25 23L30 27L25 31M22 21L20 33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 40H29M24 36V40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            )}
+
+            {area.class === "ai" && (
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 8V15M24 33V40M8 24H15M33 24H40M12.7 12.7L17.7 17.7M30.3 30.3L35.3 35.3M35.3 12.7L30.3 17.7M17.7 30.3L12.7 35.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="16" y="16" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="21" cy="22" r="1.5" fill="currentColor"/>
+                <circle cx="27" cy="22" r="1.5" fill="currentColor"/>
+                <path d="M20 27H28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            )}
+
+            {area.class === "lab3d" && (
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 7L39 15.5V32.5L24 41L9 32.5V15.5L24 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 15.5L24 24L39 15.5M24 24V41" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M16.5 11.2L31.5 19.7V27.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+              </svg>
+            )}
+
+            {area.class === "networks" && (
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="18" y="6" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="5" y="32" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="31" y="32" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M24 16V24M11 32V24H37V32" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="24" cy="24" r="2" fill="currentColor"/>
+              </svg>
+            )}
+          </div>
+
+          <div class="hive-card-content">
+            <span class="hive-card-category">{area.category}</span>
+            <h3>{area.name}</h3>
+            <p>{area.description}</p>
+          </div>
+
+          <div class="hive-card-tags">
+            {area.tags.map((tag) => (
+              <span>{tag}</span>
+            ))}
+          </div>
+
+          <div class="hive-card-footer">
+            <span>ÁREA TECNOLÓGICA</span>
+            <span class="hive-card-arrow">↗</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Future exploration -->
+    <div class="hive-future">
+      <div class="hive-future-left">
+        <span class="future-symbol">+</span>
+        <div>
+          <span class="future-label">EN EXPLORACIÓN</span>
+          <p>Nuevas áreas que podrían formar parte del ecosistema.</p>
+        </div>
+      </div>
+
+      <div class="hive-future-tags">
+        <span>IoT</span>
+        <span>Hardware</span>
+        <span>Robótica</span>
+        <span>Automatización</span>
+      </div>
+    </div>
+
+    <!-- Bottom statement -->
+    <div class="hive-bottom-note">
+      <span class="hive-bottom-line"></span>
+      <p>
+        Diferentes disciplinas. Una misma visión:
+        <strong>crear, conectar y evolucionar.</strong>
+      </p>
+    </div>
+  </div>
+</section>

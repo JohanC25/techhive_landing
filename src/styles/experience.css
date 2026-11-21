@@ -1,0 +1,485 @@
+
+/* =========================================
+   TECHHIVE — EXPERIENCE SECTION
+========================================= */
+
+.experience-section {
+  position: relative;
+  overflow: hidden;
+  background: #0c1118;
+}
+
+/* HEADER */
+
+.experience-heading {
+  margin-bottom: 55px;
+}
+
+.experience-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--th-text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+}
+
+.experience-label-line {
+  width: 28px;
+  height: 1px;
+  background: var(--th-cyan);
+}
+
+.experience-heading-content {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+}
+
+.experience-heading-content .th-section-title span {
+  color: var(--th-cyan);
+}
+
+.experience-heading-content .th-section-description {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* MAIN GRID */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 45px;
+}
+
+/* COLUMN HEADER */
+
+.experience-column-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+  color: #657586;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+.experience-header-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* TIMELINE */
+
+.experience-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 18px;
+  padding-bottom: 35px;
+}
+
+.experience-item:last-child {
+  padding-bottom: 10px;
+}
+
+.experience-timeline-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-timeline-marker::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  bottom: -35px;
+  width: 1px;
+  background: rgba(34, 211, 238, 0.15);
+}
+
+.experience-item:last-child .experience-timeline-marker::before {
+  display: none;
+}
+
+.experience-timeline-marker span {
+  position: relative;
+  z-index: 2;
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  background: #0c1118;
+  border: 1px solid var(--th-cyan);
+  border-radius: 50%;
+}
+
+.experience-item-content {
+  min-width: 0;
+  padding: 23px;
+  background: #0a1017;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  transition: border-color 0.25s ease;
+}
+
+.experience-item:hover .experience-item-content {
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+.experience-period {
+  display: block;
+  color: var(--th-cyan);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.experience-type {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 7px;
+  color: #758494;
+  font-size: 7px;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+}
+
+.experience-item-content h3 {
+  margin: 15px 0 0;
+  color: #e5edf4;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.experience-item-content h4 {
+  margin: 7px 0 0;
+  color: #718091;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.experience-item-content p {
+  margin: 15px 0 0;
+  color: #8794a2;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+/* EDUCATION */
+
+.education-block {
+  margin-top: 45px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: #0a1017;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  transition: border-color 0.25s ease;
+}
+
+.education-item:hover {
+  border-color: rgba(34, 211, 238, 0.18);
+}
+
+.education-item-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--th-cyan);
+  background: rgba(34, 211, 238, 0.05);
+  border: 1px solid rgba(34, 211, 238, 0.1);
+  border-radius: 4px;
+}
+
+.education-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.education-item-content {
+  min-width: 0;
+}
+
+.education-item-content h3 {
+  margin: 0;
+  color: #dce5ed;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.education-item-content > span {
+  display: block;
+  margin-top: 7px;
+  color: #788798;
+  font-size: 10px;
+}
+
+.education-item-content p {
+  margin: 7px 0 0;
+  color: #566575;
+  font-size: 9px;
+}
+
+/* TECHNOLOGY PANEL */
+
+.technology-panel {
+  padding: 25px;
+  background: #0a1017;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 7px;
+}
+
+.technology-panel-intro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.technology-panel-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--th-cyan);
+  background: rgba(34, 211, 238, 0.05);
+  border: 1px solid rgba(34, 211, 238, 0.12);
+  border-radius: 4px;
+}
+
+.technology-panel-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.technology-panel-intro h3 {
+  margin: 0;
+  color: #dce5ed;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.technology-panel-intro p {
+  margin: 6px 0 0;
+  color: #657586;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* TECHNOLOGY GROUPS */
+
+.technology-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 0;
+}
+
+.technology-group-title {
+  display: block;
+  margin-bottom: 12px;
+  color: #5e6e7e;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.technology-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 11px;
+  color: #94a1af;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.technology-tag:hover {
+  color: #cceff4;
+  background: rgba(34, 211, 238, 0.05);
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+/* PANEL FOOTER */
+
+.technology-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #4f5d6c;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.technology-footer-mark {
+  color: var(--th-cyan);
+  font-size: 14px;
+}
+
+/* BOTTOM STATEMENT */
+
+.experience-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 55px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.experience-bottom-mark {
+  color: var(--th-cyan);
+  font-size: 19px;
+}
+
+.experience-bottom p {
+  margin: 0;
+  color: #657282;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.experience-bottom strong {
+  color: #c5d1dc;
+  font-weight: 600;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .experience-heading-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .experience-column,
+  .technology-column {
+    width: 100%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .experience-heading {
+    margin-bottom: 40px;
+  }
+
+  .experience-heading-content .th-section-title {
+    font-size: clamp(32px, 8vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .experience-grid {
+    gap: 35px;
+  }
+
+  .experience-item-content {
+    padding: 20px;
+  }
+
+  .technology-panel {
+    padding: 20px;
+  }
+
+  .technology-groups {
+    gap: 22px;
+  }
+
+  .experience-bottom {
+    margin-top: 40px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .experience-item {
+    gap: 12px;
+  }
+
+  .experience-item-content {
+    padding: 17px;
+  }
+
+  .experience-item-content h3 {
+    font-size: 15px;
+  }
+
+  .technology-panel {
+    padding: 16px;
+  }
+
+  .technology-tag {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+
+  .technology-panel-footer {
+    font-size: 7px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-item-content,
+  .education-item,
+  .technology-tag {
+    transition: none;
+  }
+}

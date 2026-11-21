@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "TechHive",
+  description = "Un ecosistema tecnológico en constante evolución que integra desarrollo de software, inteligencia artificial, infraestructura tecnológica y diseño y fabricación 3D.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta name="theme-color" content="#080b10" />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

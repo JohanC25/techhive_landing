@@ -1,0 +1,89 @@
+
+---
+import "../styles/hero.css";
+
+const cells = [
+  { name: "SOFTWARE", subtitle: "Apps & SaaS", class: "software", active: true },
+  { name: "AI LAB", subtitle: "Inteligencia artificial", class: "ai", active: true },
+  { name: "3D LAB", subtitle: "Diseño y fabricación 3D", class: "lab", active: true },
+  { name: "REDES", subtitle: "Infraestructura", class: "networks", active: false },
+  { name: "IoT", subtitle: "Sistemas conectados", class: "iot", active: false },
+];
+---
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-glow"></div>
+    <div class="grid-background"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        ECOSISTEMA TECNOLÓGICO INDEPENDIENTE
+      </div>
+
+      <h1>
+        Una colmena de tecnología.<br />
+        <span>Creada para evolucionar.</span>
+      </h1>
+
+      <p class="hero-description">
+        Las ideas se convierten en tecnología. La tecnología, en soluciones.
+        Un ecosistema en constante evolución que explora el software, la inteligencia artificial, diseño, fabricación 3D y mucho más.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#hive" class="primary-button">
+          Explorar el ecosistema
+          <span>↗</span>
+        </a>
+
+        <a href="#about" class="secondary-button">
+          Conoce al desarrollador
+        </a>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-index">
+          <span>01</span>
+          <span class="index-line"></span>
+          <span>INTRODUCCIÓN</span>
+        </div>
+
+        <p class="hero-scroll">
+          DESLIZA PARA DESCUBRIR
+          <span>↓</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-label visual-label-top">
+        <span class="label-line"></span>
+        <span>ECOSISTEMA TECNOLÓGICO</span>
+      </div>
+
+      <div class="hive">
+        {cells.map((cell) => (
+          <div class={`hex-cell ${cell.class} ${cell.active ? "active" : "inactive"}`}>
+            <div class="hex-inner">
+              {cell.active && <span class="cell-indicator"></span>}
+              <span class="cell-name">{cell.name}</span>
+              <span class="cell-subtitle">{cell.subtitle}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="visual-label visual-label-bottom">
+        <span class="legend-dot active-dot"></span>
+        <span>ÁREA ACTIVA</span>
+        <span class="legend-dot future-dot"></span>
+        <span>EN DESARROLLO</span>
+      </div>
+
+      <div class="visual-orbit orbit-one"></div>
+      <div class="visual-orbit orbit-two"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,347 @@
+
+/* =========================================
+   TECHHIVE — SERVICES SECTION
+========================================= */
+
+.services-section {
+  position: relative;
+  overflow: hidden;
+  background: #0c1118;
+}
+
+/* HEADER */
+
+.services-heading {
+  margin-bottom: 55px;
+}
+
+.services-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--th-text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+}
+
+.services-label-line {
+  width: 28px;
+  height: 1px;
+  background: var(--th-cyan);
+}
+
+.services-heading-content {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+}
+
+.services-heading-content .th-section-title span {
+  color: var(--th-cyan);
+}
+
+.services-heading-content .th-section-description {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* SERVICES GRID */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* CARD */
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 300px;
+  padding: 30px;
+  background: #0a1017;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 0;
+  height: 1px;
+  background: var(--th-cyan);
+  transition: width 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  background: #0d151e;
+  border-color: rgba(34, 211, 238, 0.22);
+}
+
+.service-card:hover::before {
+  width: 55px;
+}
+
+/* CARD TOP */
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-number {
+  color: #526273;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.service-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--th-cyan);
+  background: rgba(34, 211, 238, 0.05);
+  border: 1px solid rgba(34, 211, 238, 0.12);
+  border-radius: 5px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.35);
+  transform: translateY(-2px);
+}
+
+/* CARD CONTENT */
+
+.service-card-content {
+  margin-top: 30px;
+}
+
+.service-card-content h3 {
+  margin: 0;
+  color: #e8eff5;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.service-card-content p {
+  margin: 14px 0 0;
+  max-width: 520px;
+  color: #8995a3;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* TAGS */
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.service-tags span {
+  padding: 7px 9px;
+  color: #778697;
+  font-size: 9px;
+  background: rgba(34, 211, 238, 0.035);
+  border: 1px solid rgba(34, 211, 238, 0.09);
+  border-radius: 3px;
+}
+
+/* CARD FOOTER */
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 25px;
+  color: #4f5d6c;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.service-card-arrow {
+  color: #607080;
+  font-size: 16px;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.service-card:hover .service-card-arrow {
+  color: var(--th-cyan);
+  transform: translate(3px, -3px);
+}
+
+/* BOTTOM CTA */
+
+.services-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 45px;
+  padding: 28px 30px;
+  background: rgba(34, 211, 238, 0.025);
+  border: 1px solid rgba(34, 211, 238, 0.1);
+  border-radius: 6px;
+}
+
+.services-bottom-copy > span {
+  color: #647486;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+.services-bottom-copy p {
+  margin: 8px 0 0;
+  color: #c4d0da;
+  font-size: 13px;
+}
+
+.services-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  padding: 12px 17px;
+  color: #dffaff;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 4px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.services-contact-link span {
+  color: var(--th-cyan);
+  transition: transform 0.25s ease;
+}
+
+.services-contact-link:hover {
+  background: rgba(34, 211, 238, 0.08);
+  border-color: var(--th-cyan);
+}
+
+.services-contact-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .services-heading-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .service-card {
+    min-height: 320px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .services-heading {
+    margin-bottom: 40px;
+  }
+
+  .services-heading-content .th-section-title {
+    font-size: clamp(32px, 8vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    min-height: 280px;
+    padding: 26px;
+  }
+
+  .service-card-content {
+    margin-top: 24px;
+  }
+
+  .services-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .service-card {
+    min-height: 260px;
+    padding: 22px;
+  }
+
+  .service-card-content h3 {
+    font-size: 19px;
+  }
+
+  .service-card-content p {
+    font-size: 11px;
+  }
+
+  .services-bottom-copy p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-icon,
+  .service-card-arrow,
+  .services-contact-link span {
+    transition: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+}

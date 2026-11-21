@@ -1,0 +1,137 @@
+
+@import "tailwindcss";
+
+/* =========================================
+   TECHHIVE - GLOBAL DESIGN SYSTEM
+========================================= */
+
+:root {
+  --th-bg: #080b10;
+  --th-bg-secondary: #0c1118;
+  --th-surface: #0d141d;
+
+  --th-cyan: #22d3ee;
+  --th-cyan-light: #6be8f8;
+
+  --th-text: #f5f7fa;
+  --th-text-secondary: #909aa8;
+  --th-text-muted: #56616e;
+
+  --th-border: rgba(255, 255, 255, 0.08);
+  --th-border-cyan: rgba(34, 211, 238, 0.35);
+
+  --th-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --th-transition: 0.25s ease;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--th-font);
+  background: var(--th-bg);
+  color: var(--th-text);
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #fff;
+}
+
+/* GLOBAL UTILITIES */
+
+.th-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 6%;
+}
+
+.th-accent {
+  color: var(--th-cyan);
+}
+
+.th-muted {
+  color: var(--th-text-secondary);
+}
+
+.th-section {
+  position: relative;
+  padding: 100px 0;
+}
+
+.th-section-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.th-section-description {
+  color: var(--th-text-secondary);
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--th-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #263441;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--th-cyan);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .th-container {
+    padding-inline: 5%;
+  }
+
+  .th-section {
+    padding: 70px 0;
+  }
+}

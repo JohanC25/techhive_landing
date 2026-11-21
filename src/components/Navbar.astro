@@ -1,0 +1,65 @@
+
+---
+import "../styles/navbar.css";
+
+const links = [
+  { label: "ECOSISTEMA", href: "#hive" },
+  { label: "PROYECTOS", href: "#projects" },
+  { label: "SOBRE MÍ", href: "#about" },
+  { label: "CONTACTAME", href: "#contact" },
+];
+---
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="/" class="brand" aria-label="Inicio de TechHive">
+      <span class="brand-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 3L34.7 11.5V28.5L20 37L5.3 28.5V11.5L20 3Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M20 11L27.5 15.3V24.7L20 29L12.5 24.7V15.3L20 11Z"
+            fill="currentColor"
+            opacity="0.25"
+          />
+          <path
+            d="M20 15L23.5 17V23L20 25L16.5 23V17L20 15Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+
+      <span class="brand-text">
+        TECH<span>HIVE</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+
+    <a href="#contact" class="nav-cta">
+      Hablemos
+      <span>↗</span>
+    </a>
+
+    <details class="mobile-menu">
+      <summary aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+      </summary>
+
+      <nav class="mobile-nav" aria-label="Navegación móvil">
+        {links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+        <a href="#contact" class="mobile-contact">Let's connect ↗</a>
+      </nav>
+    </details>
+  </div>
+</header>
